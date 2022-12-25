@@ -1,4 +1,13 @@
 # GitHub User Search
 
-Search github users and view their repos with 1 click.
-Uses the GitHub API to fetch users and their repositories. It also uses TailwindCSS to style the page.
+The GitHub User Search project allows users to search for GitHub users and view their repositories with a single click. The project utilizes the GitHub API to retrieve user and repository data, and employs TailwindCSS for styling.
+
+## Build
+
+To build the project, navigate to the project directory and run the following command:
+
+```bash
+npm install
+npm run tailwind
+```
+
