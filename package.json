@@ -1,0 +1,24 @@
+{
+  "name": "github-user-search",
+  "version": "1.0.0",
+  "description": "Search github users and view their repos with 1 click. Uses the GitHub API to fetch users and their repositories. It also uses TailwindCSS to style the page.",
+  "main": "script.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css",
+    "tw": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Recoded-bootcamp/github-user-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Recoded-bootcamp/github-user-search/issues"
+  },
+  "homepage": "https://github.com/Recoded-bootcamp/github-user-search#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

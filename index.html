@@ -1,40 +1,71 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>GitHub Search</title>
+  </head>
 
-<head>
-	<meta charset='UTF-8' />
-	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-	<meta http-equiv='X-UA-Compatible' content='ie=edge' />
-	<title>GitHub Search</title>
-	<link rel='stylesheet' href='style.css' />
-</head>
+  <body class="dark:bg-neutral-800 dark:text-slate-100">
+    <main class="flex flex-col items-center mx-auto max-w-5xl px-4 lg:px-0">
+      <h2 class="text-3xl my-8">GitHub Search</h2>
+      <form
+        id="github-form"
+        class="input-group relative flex flex-wrap justify-center gap-4 w-full mb-4"
+      >
+        <input
+          id="search"
+          type="text"
+          name="search"
+          placeholder="Username"
+          class="relative flex-auto min-w-0 max-w-xs block px-3 py-1.5 text-base
+					font-normal text-gray-700 bg-white bg-clip-padding border border-solid
+					border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-702
+					focus:bg-neutral-600 focus:border-blue-600 focus:outline-none
+					dark:bg-neutral-700 dark:text-slate-100 dark:border-gray-600"
+          required
+        />
+        <input
+          type="submit"
+          name="submit"
+          value="Search"
+          class="inline-block px-6 py-2 border-2 bg-blue-600/25 border-blue-600
+					text-blue-800 font-medium text-xs leading-tight uppercase rounded
+					hover:bg-blue-600 hover:text-white transition duration-150 ease-in-out
+					dark:border-blue-600 dark:text-blue-200"
+        />
+      </form>
+      <div
+        id="github-container"
+        class="hidden flex flex-col items-center gap-8 w-full"
+      >
+        <section
+          class="users users flex flex-wrap items-center justify-center gap-4 p-8
+					min-h-[30vh] bg-white rounded-lg shadow-lg w-full border-solid
+					border-gray-300 sm:justify-between dark:bg-neutral-700/50 dark:border-gray-800"
+        >
+          <ul
+            id="user-list"
+            class="flex flex-wrap items-center justify-evenly gap-4 rounded-lg
+						list-none w-full"
+          ></ul>
+        </section>
 
-<body class="dark:bg-neutral-800 dark:text-slate-100">
-	<main class="flex flex-col items-center mx-auto max-w-5xl px-4 lg:px-0">
-		<h2 class="text-3xl my-8">GitHub Search</h2>
-		<form id='github-form' class="input-group relative flex flex-wrap justify-center gap-4 w-full mb-4">
-			<input id='search' type='text' name='search' placeholder='Username'
-				class="relative flex-auto min-w-0 max-w-xs block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-702 focus:bg-neutral-600 focus:border-blue-600 focus:outline-none dark:bg-neutral-700 dark:text-slate-100 dark:border-gray-600"
-				required>
-			<input type='submit' name='submit' value="Search"
-				class="inline-block px-6 py-2 border-2 bg-blue-600/25 border-blue-600 text-blue-800 font-medium text-xs leading-tight uppercase rounded hover:bg-blue-600 hover:text-white transition duration-150 ease-in-out dark:border-blue-600 dark:text-blue-200" />
-		</form>
-		<div id='github-container' class="hidden flex flex-col items-center gap-8 w-full">
-			<section class="users users flex flex-wrap items-center justify-center gap-4 p-8 min-h-[30vh] bg-white rounded-lg shadow-lg w-full border-solid border-gray-300 sm:justify-between dark:bg-neutral-700/50 dark:border-gray-800">
-				<ul id='user-list'
-				class="flex flex-wrap items-center justify-evenly gap-4 rounded-lg list-none w-full">
-				</ul>
-			</section>
-
-			<section class="users flex flex-wrap items-center justify-evenly gap-4 p-8 mb-10 min-h-[30vh] bg-white rounded-lg shadow-lg w-full border-solid border-gray-300 sm:justify-between dark:bg-neutral-700/50 dark:border-gray-800">
-				<ul id='repos-list'
-				class="flex flex-wrap items-center justify-evenly gap-4 p-4 rounded-lg list-none w-full">
-				</ul>
-			</section>
-		</div>
-
-	</main>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script src='script.js'></script>
-</body>
-
+        <section
+          class="users flex flex-wrap items-center justify-evenly gap-4 p-8 mb-10
+					min-h-[30vh] bg-white rounded-lg shadow-lg w-full border-solid
+					border-gray-300 sm:justify-between dark:bg-neutral-700/50 dark:border-gray-800"
+        >
+          <ul
+            id="repos-list"
+            class="flex flex-wrap items-center justify-evenly gap-4 p-4
+						rounded-lg list-none w-full"
+          ></ul>
+        </section>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
